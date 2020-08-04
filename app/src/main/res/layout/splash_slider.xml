@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:layout_weight="3"
+    android:background="@drawable/splash_bg"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:attrs="http://schemas.android.com/tools">
+
+    <LinearLayout
+
+        android:gravity="center"
+        android:layout_weight="1.1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+
+            android:background="@drawable/ic_logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_weight="0.7"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.viewpager.widget.ViewPager
+
+            android:id="@+id/splash_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.viewpager.widget.ViewPager>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_weight="1.2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center">
+
+            <com.rd.PageIndicatorView
+
+                android:id="@+id/pageIndicatorView"
+                android:layout_width="wrap_content"
+                android:backgroundTint="@color/white"
+                app:piv_count="6"
+                app:piv_animationType="worm"
+                app:piv_viewPager="@id/splash_viewpager"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                app:piv_padding="10dp"
+                app:piv_radius="@dimen/_8sdp"
+                app:piv_selectedColor="@color/themecolor"
+                app:piv_unselectedColor="@color/grey"/>
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+
+            android:gravity="center_horizontal"
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:id="@+id/txtvw_splash_skip"
+                android:visibility="visible"
+                android:textColor="@color/textcolor"
+                android:fontFamily="@font/opensans_semibold"
+                android:textSize="@dimen/_18sdp"
+                android:textAllCaps="false"
+                android:text="@string/splash_skip"
+                android:background="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

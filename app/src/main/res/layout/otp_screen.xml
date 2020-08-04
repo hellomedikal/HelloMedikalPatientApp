@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:weightSum="5"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:weightSum="7"
+        android:layout_weight="1.6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_weight="3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_weight="4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:background="@drawable/ic_arrow_back_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:gravity="center"
+                    android:layout_weight="0.6"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:layout_gravity="bottom"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:gravity="bottom"
+                        android:textSize="@dimen/_24sdp"
+                        android:textColor=" #3A3A3A"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="Enter the code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_weight="1.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor=" #3A3A3A"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="sent to "
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                    <TextView
+
+                        android:id="@+id/textvw_phn_number"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor=" #3A3A3A"
+                        android:fontFamily="@font/opensans_semibold"
+                        android:text="+1 (420) 912 0000"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:weightSum="2"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="0.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp">
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp">
+
+                            <EditText
+
+                                android:maxLines="1"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:maxLength="1"
+                                android:inputType="number"
+                                android:id="@+id/otp_first_digit"
+                                android:gravity="center"
+                                android:textSize="@dimen/_16sdp"
+                                android:textColor="@color/themecolor"
+                                android:background="@null"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp">
+
+                            <View
+
+                                android:background="@color/otpcolor"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </View>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp">
+
+                            <EditText
+
+                                android:maxLines="1"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:maxLength="1"
+                                android:inputType="number"
+                                android:id="@+id/otp_sec_digit"
+                                android:gravity="center"
+                                android:textSize="@dimen/_16sdp"
+                                android:textColor="@color/themecolor"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp">
+
+                            <View
+
+                                android:background="@color/otpcolor"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </View>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp">
+
+                            <EditText
+
+                                android:maxLines="1"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:maxLength="1"
+                                android:inputType="number"
+                                android:id="@+id/otp_third_digit"
+                                android:gravity="center"
+                                android:textSize="@dimen/_16sdp"
+                                android:textColor="@color/themecolor"
+                                android:background="@null"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp">
+
+                            <View
+
+                                android:background="@color/otpcolor"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </View>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:orientation="vertical"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_28sdp">
+
+                            <EditText
+
+                                android:maxLines="1"
+                                android:imeOptions="actionNext"
+                                android:singleLine="true"
+                                android:maxLength="1"
+                                android:inputType="number"
+                                android:id="@+id/otp_fourth_digit"
+                                android:gravity="center"
+                                android:textSize="@dimen/_16sdp"
+                                android:textColor="@color/themecolor"
+                                android:background="@null"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp">
+
+                            <View
+
+                                android:background="@color/otpcolor"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </View>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1.2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:id="@+id/txt_resend_code"
+                        android:gravity="center_horizontal"
+                        android:textSize="@dimen/_15sdp"
+                        android:textColor="@color/themecolor"
+                        android:fontFamily="@font/opensans_regular"
+                        android:text="R e s e n d  C o d e"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+
+        android:id="@+id/layout_otp_submit"
+        android:gravity="center"
+        android:visibility="visible"
+        android:orientation="vertical"
+        android:layout_weight="3.4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+
+            android:id="@+id/img_otp_submit"
+            android:background="@drawable/ic_circle_icon_blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:id="@+id/layout_resend_screen"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:weightSum="5"
+        android:layout_weight="3.4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="#bababa"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp">
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:gravity="center"
+            android:layout_weight="3.3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="0.8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@color/theme_red"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Resend Code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:layout_weight="1.2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor=" #3A3A3A"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="sent to "
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+
+                    android:gravity="center_horizontal"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor=" #3A3A3A"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="+1 (420) 912 0000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:orientation="vertical"
+            android:weightSum="2"
+            android:layout_weight="1.7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+
+                    android:id="@+id/btn_resend_text_me"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Text Me"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:background="@drawable/shape_red_rounded_solid"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </Button>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+
+                    android:id="@+id/btn_resend_call_me"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/raleway_regular"
+                    android:text="Call Me"
+                    android:textColor="@color/theme_red"
+                    android:textSize="@dimen/_18sdp"
+                    android:background="@drawable/shape_red_rounded"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

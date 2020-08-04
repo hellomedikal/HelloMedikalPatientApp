@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="11">
+
+
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_weight="9.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:gravity="center"
+                android:textSize="@dimen/_17sdp"
+                android:textColor="@color/themecolor"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Register Form"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:gravity="center"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#333e48"
+                android:fontFamily="@font/roboto_regular"
+                android:text="Please fill out the form below to get started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:weightSum="11"
+        android:layout_weight="1.5"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_weight="8.8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                    <ImageView
+
+                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/ic_male_blue_icon" />
+
+                <TextView
+
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/themecolor"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                    <ImageView
+
+                        android:layout_marginLeft="@dimen/_30sdp"
+                        android:gravity="left"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/ic_female_grey_icon" />
+
+                <TextView
+
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/themecolor"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:paddingRight="@dimen/_20sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:orientation="vertical"
+            android:weightSum="9"
+            android:layout_weight="2.2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:weightSum="5"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/shape_grey_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:visibility="gone"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/textcolor"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Pradeep@gmail.com"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+
+                            android:textColor="@color/textcolor"
+                            android:paddingLeft="@dimen/_20sdp"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.8"
+                            android:background="@null"
+                            android:hint="Enter Your Email Address"
+                            android:filterTouchesWhenObscured="false"
+                            android:fontFamily="@font/roboto_regular"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/grey"
+                            android:textSize="@dimen/_13sdp" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_email_icon_grey" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:weightSum="5"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/shape_grey_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <EditText
+
+                            android:textColor="@color/textcolor"
+                            android:paddingLeft="@dimen/_20sdp"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textPersonName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.8"
+                            android:background="@null"
+                            android:hint="Enter Your Name"
+                            android:filterTouchesWhenObscured="false"
+                            android:fontFamily="@font/roboto_regular"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/grey"
+                            android:textSize="@dimen/_13sdp" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_person_register_grey" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:weightSum="5"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/shape_grey_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:visibility="gone"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/textcolor"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="7719491228"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+
+                            android:textColor="@color/textcolor"
+                            android:paddingLeft="@dimen/_20sdp"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textEmailAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.8"
+                            android:background="@null"
+                            android:hint="Enter Your Phone Number"
+                            android:filterTouchesWhenObscured="false"
+                            android:fontFamily="@font/roboto_regular"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/grey"
+                            android:textSize="@dimen/_13sdp" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_phone_grey" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:weightSum="5"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/shape_grey_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:visibility="gone"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/textcolor"
+                            android:fontFamily="@font/roboto_regular"
+                            android:text="Pradeep@gmail.com"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <EditText
+
+                            android:textColor="@color/textcolor"
+                            android:paddingLeft="@dimen/_20sdp"
+                            android:clickable="true"
+                            android:focusableInTouchMode="true"
+                            android:inputType="textPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3.8"
+                            android:background="@null"
+                            android:hint="Enter Your Password"
+                            android:filterTouchesWhenObscured="false"
+                            android:fontFamily="@font/roboto_regular"
+                            android:includeFontPadding="false"
+                            android:textColorHint="@color/grey"
+                            android:textSize="@dimen/_13sdp" />
+
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_email_icon_grey" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:weightSum="5"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/shape_grey_rounded"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:hint="Enter Date of Birth"
+                            android:paddingLeft="@dimen/_15sdp"
+                            android:gravity="center_vertical"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColor="@color/textcolor"
+                            android:fontFamily="@font/roboto_regular"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:gravity="center"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ic_calendar_grey" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:orientation="horizontal"
+                android:weightSum="5"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:gravity="center_vertical"
+                    android:layout_weight="4.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:background="@drawable/shape_circle_grey"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp">
+
+                        <LinearLayout
+
+                            android:background="@drawable/shape_circle_grey_solid"
+                            android:layout_width="@dimen/_12sdp"
+                            android:layout_height="@dimen/_12sdp">
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="#333e48"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text="I agree with your"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:textSize="@dimen/_12sdp"
+                        android:textColor="@color/themecolor"
+                        android:fontFamily="@font/roboto_regular"
+                        android:text=" terms and conditions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textAllCaps="false"
+                    android:textSize="@dimen/_16sdp"
+                    android:textColor="@color/white"
+                    android:text="Register"
+                    android:background="@drawable/shape_rounded_solid"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="#333e48"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text="Already have an account?"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+
+                    android:id="@+id/txtvw_signup_second_screen_login"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/themecolor"
+                    android:fontFamily="@font/roboto_regular"
+                    android:text=" Sign In"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

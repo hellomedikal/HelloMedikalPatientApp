@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:background="@drawable/login_type_bg"
+        android:gravity="center"
+        android:layout_weight="0.4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:weightSum="2"
+        android:layout_weight="1.2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:weightSum="2"
+            android:orientation="vertical"
+            android:layout_weight="0.8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:gravity="bottom"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_23sdp"
+                    android:textColor=" #3A3A3A"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Welcome to the"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:gravity="top"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:textSize="@dimen/_23sdp"
+                    android:textColor=" #3A3A3A"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="HelloMedikal app"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_weight="1.2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+
+                    android:id="@+id/btn_login"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="SIGN IN"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp"
+                    android:background="@drawable/shape_rounded_solid"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+                </Button>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <Button
+
+                    android:id="@+id/btn_register"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="SIGNUP"
+                    android:textColor="@color/themecolor"
+                    android:textSize="@dimen/_18sdp"
+                    android:background="@drawable/shape_rounded"
+                    android:layout_width="@dimen/_130sdp"
+                    android:layout_height="@dimen/_40sdp">
+
+
+                </Button>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:orientation="vertical"
+        android:layout_weight="1.4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/_6sdp"
+            android:background="#bababa"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp">
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+
+                android:gravity="center"
+                android:textSize="@dimen/_18sdp"
+                android:textColor=" #3A3A3A"
+                android:fontFamily="@font/opensans_semibold"
+                android:text="Explore as Guest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

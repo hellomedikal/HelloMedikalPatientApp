@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HelloMedikalPatientApp</string>
+    <string name="splash_skip">Skip</string>
+    <string name="splash1">Find Dr or Clinic</string>
+    <string name="splash2">Find The Nearest Hospital</string>
+    <string name="splash3">Find The Nearest Pharmacy</string>
+    <string name="splash4">Find The Nearest Blood Bank Emergency</string>
+    <string name="splash5">Find The Nearest Fitness Center</string>
+    <string name="splash6">Book Appointment With Hellomedikal App</string>
+
+    <string name="email">E-mail</string>
+    <string name="phone">Phone</string>
+
+</resources>
