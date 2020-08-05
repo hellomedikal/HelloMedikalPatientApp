@@ -418,7 +418,7 @@
                     android:textStyle="bold"
                     android:gravity="center_horizontal"
                     android:textSize="@dimen/_20sdp"
-                    android:textColor="@color/theme_red"
+                    android:textColor="@color/themecolor"
                     android:fontFamily="@font/raleway_regular"
                     android:text="Resend Code"
                     android:layout_width="wrap_content"
@@ -484,7 +484,6 @@
                     android:text="Text Me"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_18sdp"
-                    android:background="@drawable/shape_red_rounded_solid"
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="@dimen/_40sdp">
 
@@ -506,9 +505,8 @@
                     android:textAllCaps="false"
                     android:fontFamily="@font/raleway_regular"
                     android:text="Call Me"
-                    android:textColor="@color/theme_red"
+                    android:textColor="@color/themecolor"
                     android:textSize="@dimen/_18sdp"
-                    android:background="@drawable/shape_red_rounded"
                     android:layout_width="@dimen/_200sdp"
                     android:layout_height="@dimen/_40sdp">
 

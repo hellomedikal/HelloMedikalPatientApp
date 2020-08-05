@@ -24,13 +24,322 @@
 
     <LinearLayout
 
+        android:orientation="vertical"
+        android:weightSum="5"
         android:layout_weight="2.5"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
+
+
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:layout_weight="3.5"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:textStyle="italic"
+                    android:visibility="visible"
+                    android:textColor="@color/themecolor"
+                    android:fontFamily="@font/opensans_bold"
+                    android:textSize="@dimen/_21sdp"
+                    android:textAllCaps="false"
+                    android:text="Please Login Your Account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+
+                    android:gravity="center"
+                    android:visibility="visible"
+                    android:textColor="@color/textcolor"
+                    android:fontFamily="@font/roboto_regular"
+                    android:textSize="@dimen/_18sdp"
+                    android:textAllCaps="false"
+                    android:text="Enter your login info to sign in to your account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:weightSum="3"
+            android:paddingRight="@dimen/_15sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:layout_weight="1.5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+
+                android:orientation="vertical"
+                android:weightSum="3"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:gravity="center"
+                    android:layout_weight="1.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:background="@drawable/shape_grey_rounded"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <LinearLayout
+
+                            android:gravity="center"
+                            android:layout_weight="4.2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+
+                                android:background="@drawable/ic_login_email"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_weight="0.8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <EditText
+
+                                android:textColor="@color/textcolor"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:clickable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="textEmailAddress"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3.8"
+                                android:background="@null"
+                                android:hint="Enter Your Email Address"
+                                android:filterTouchesWhenObscured="false"
+                                android:fontFamily="@font/roboto_regular"
+                                android:includeFontPadding="false"
+                                android:textColorHint="@color/grey"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:gravity="center"
+                    android:layout_weight="1.1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+                        android:weightSum="5"
+                        android:background="@drawable/shape_grey_rounded"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <LinearLayout
+
+                            android:gravity="center"
+                            android:layout_weight="2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+
+                                android:background="@drawable/ic_login_password_icon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_weight="1.2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+
+                            <EditText
+
+                                android:textColor="@color/textcolor"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:clickable="true"
+                                android:focusableInTouchMode="true"
+                                android:inputType="textPassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3.8"
+                                android:background="@null"
+                                android:hint="Enter Your Password"
+                                android:filterTouchesWhenObscured="false"
+                                android:fontFamily="@font/roboto_regular"
+                                android:includeFontPadding="false"
+                                android:textColorHint="@color/grey"
+                                android:textSize="@dimen/_13sdp" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+
+                            android:layout_weight="1.8"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <view
+
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:layout_marginBottom="@dimen/_8sdp"
+                                android:background="@color/themecolor"
+                                android:layout_width="@dimen/_1sdp"
+                                android:layout_height="match_parent">
+
+                            </view>
+
+                            <TextView
+
+                                android:gravity="center"
+                                android:visibility="visible"
+                                android:textColor="@color/themecolor"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="@dimen/_16sdp"
+                                android:textAllCaps="false"
+                                android:text="Forgot ?"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+
+                    android:gravity="center"
+                    android:layout_weight="0.8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp">
+
+                        <LinearLayout
+
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+
+                                android:gravity="center"
+                                android:visibility="visible"
+                                android:textColor="@color/textcolor"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="@dimen/_14sdp"
+                                android:textAllCaps="false"
+                                android:text="No account ?"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                            <TextView
+
+                                android:gravity="center"
+                                android:visibility="visible"
+                                android:textColor="@color/themecolor"
+                                android:fontFamily="@font/roboto_regular"
+                                android:textSize="@dimen/_14sdp"
+                                android:textAllCaps="false"
+                                android:text=" Signup"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <Button
+
+
+                                android:gravity="center"
+                                android:textAllCaps="false"
+                                android:id="@+id/btn_signup_first_register"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_5sdp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shape"
+                                android:text="Login Now"
+                                android:textColor="#ffffff"
+                                android:textSize="@dimen/_13sdp"
+                                android:fontFamily="@font/roboto_regular"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </LinearLayout>
 
         </LinearLayout>
 
