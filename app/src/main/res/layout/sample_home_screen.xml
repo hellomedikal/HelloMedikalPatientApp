@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-
+<LinearLayout 
+    
     android:weightSum="11"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    android:orientation="vertical" 
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white">
-
+    
     <LinearLayout
-
+        
         android:gravity="center"
         android:background="@color/themecolor"
         android:layout_weight="2"
@@ -26,11 +26,11 @@
             android:text="Sample Home Screen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
-
+        
     </LinearLayout>
-
+    
     <LinearLayout
-
+        
         android:gravity="center"
         android:layout_weight="9"
         android:layout_width="match_parent"
