@@ -27,6 +27,7 @@
 
             <LinearLayout
 
+                android:id="@+id/layout_signup_type_email_outer"
                 android:background="@drawable/shape_left_rounded_signup_blue"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
@@ -34,6 +35,7 @@
 
                 <LinearLayout
 
+                    android:id="@+id/layout_signup_type_email_inner"
                     android:orientation="horizontal"
                     android:layout_weight="3"
                     android:background="@drawable/shape"
@@ -49,6 +51,7 @@
 
                         <ImageView
 
+                            android:id="@+id/imgvw_signup_type_email"
                             android:background="@drawable/ic_email_icon_white"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content" />
@@ -65,6 +68,7 @@
 
                         <TextView
 
+                            android:id="@+id/txtvw_signup_type_email"
                             android:fontFamily="@font/roboto_regular"
                             android:gravity="center_vertical"
                             android:textColor="@color/white"
@@ -80,11 +84,21 @@
             </LinearLayout>
 
 
+            <LinearLayout
+
+                android:id="@+id/layout_signup_type_phn_outer"
+                android:background="@drawable/shape_right_rouded_signup_grey"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
 
             <LinearLayout
 
+
+                android:id="@+id/layout_signup_type_phn_inner"
                 android:weightSum="3"
-                android:background="@drawable/shape_right_rouded_signup_grey"
+                android:background="@drawable/shape_grey"
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
@@ -98,6 +112,7 @@
 
                     <ImageView
 
+                        android:id="@+id/imgvw_signup_type_phn"
                         android:background="@drawable/ic_phone_icon_blue"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
@@ -114,6 +129,7 @@
 
                     <TextView
 
+                        android:id="@+id/txtvw_signup_type_phn"
                         android:fontFamily="@font/roboto_regular"
                         android:gravity="center_vertical"
                         android:textColor="@color/themecolor"
@@ -130,12 +146,16 @@
 
     </LinearLayout>
 
-    <LinearLayout
+    </LinearLayout>
+
+
+    <FrameLayout
 
         android:layout_weight="1.5"
+        android:id="@+id/containerr"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </LinearLayout>
+    </FrameLayout>
 
 </LinearLayout>

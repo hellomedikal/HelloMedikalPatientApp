@@ -27,8 +27,9 @@
 
             <TextView
 
+                android:textStyle="bold"
                 android:gravity="center"
-                android:textSize="@dimen/_17sdp"
+                android:textSize="@dimen/_19sdp"
                 android:textColor="@color/themecolor"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Register Form"
@@ -46,6 +47,7 @@
 
             <TextView
 
+                android:layout_marginTop="@dimen/_5sdp"
                 android:gravity="center"
                 android:textSize="@dimen/_12sdp"
                 android:textColor="#333e48"
@@ -77,6 +79,7 @@
 
             <LinearLayout
 
+                android:id="@+id/layout_male"
                 android:orientation="vertical"
                 android:gravity="center"
                 android:layout_weight="1"
@@ -85,7 +88,7 @@
 
                     <ImageView
 
-                        android:layout_marginLeft="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_30sdp"
                         android:gravity="center"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -95,7 +98,7 @@
                 <TextView
 
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_30sdp"
                     android:gravity="center"
                     android:textSize="@dimen/_12sdp"
                     android:textColor="@color/themecolor"
@@ -109,6 +112,7 @@
             <LinearLayout
 
 
+                android:id="@+id/layout_female"
                 android:orientation="vertical"
                 android:gravity="center_vertical"
                 android:layout_weight="1"
@@ -128,7 +132,7 @@
                 <TextView
 
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_35sdp"
                     android:gravity="center"
                     android:textSize="@dimen/_12sdp"
                     android:textColor="@color/themecolor"
@@ -170,7 +174,7 @@
                     <LinearLayout
 
                         android:orientation="vertical"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -188,8 +192,9 @@
 
                         <EditText
 
+                            android:id="@+id/edtxt_signup_form_email"
                             android:textColor="@color/textcolor"
-                            android:paddingLeft="@dimen/_20sdp"
+                            android:paddingLeft="@dimen/_12sdp"
                             android:clickable="true"
                             android:focusableInTouchMode="true"
                             android:inputType="textEmailAddress"
@@ -211,7 +216,7 @@
                     <LinearLayout
 
                         android:gravity="center"
-                        android:layout_weight="4"
+                        android:layout_weight="4.3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -247,14 +252,15 @@
                     <LinearLayout
 
                         android:orientation="vertical"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <EditText
 
+                            android:id="@+id/edtxt_signup_form_name"
                             android:textColor="@color/textcolor"
-                            android:paddingLeft="@dimen/_20sdp"
+                            android:paddingLeft="@dimen/_12sdp"
                             android:clickable="true"
                             android:focusableInTouchMode="true"
                             android:inputType="textPersonName"
@@ -276,7 +282,7 @@
                     <LinearLayout
 
                         android:gravity="center"
-                        android:layout_weight="4"
+                        android:layout_weight="4.3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -313,7 +319,7 @@
                     <LinearLayout
 
                         android:orientation="vertical"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -331,8 +337,9 @@
 
                         <EditText
 
+                            android:id="@+id/edtxt_signup_form_phone"
                             android:textColor="@color/textcolor"
-                            android:paddingLeft="@dimen/_20sdp"
+                            android:paddingLeft="@dimen/_12sdp"
                             android:clickable="true"
                             android:focusableInTouchMode="true"
                             android:inputType="textEmailAddress"
@@ -353,7 +360,7 @@
                     <LinearLayout
 
                         android:gravity="center"
-                        android:layout_weight="4"
+                        android:layout_weight="4.3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -390,7 +397,7 @@
                     <LinearLayout
 
                         android:orientation="vertical"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -408,8 +415,9 @@
 
                         <EditText
 
+                            android:id="@+id/edtxt_signup_form_password"
                             android:textColor="@color/textcolor"
-                            android:paddingLeft="@dimen/_20sdp"
+                            android:paddingLeft="@dimen/_12sdp"
                             android:clickable="true"
                             android:focusableInTouchMode="true"
                             android:inputType="textPassword"
@@ -431,7 +439,7 @@
                     <LinearLayout
 
                         android:gravity="center"
-                        android:layout_weight="4"
+                        android:layout_weight="4.3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -468,14 +476,15 @@
                     <LinearLayout
 
                         android:orientation="vertical"
-                        android:layout_weight="1"
+                        android:layout_weight="0.7"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
                         <TextView
 
-                            android:hint="Enter Date of Birth"
-                            android:paddingLeft="@dimen/_15sdp"
+                            android:id="@+id/edtxt_signup_form_dob"
+                            android:text="Date of Birth"
+                            android:paddingLeft="@dimen/_12sdp"
                             android:gravity="center_vertical"
                             android:textSize="@dimen/_13sdp"
                             android:textColor="@color/textcolor"
@@ -489,7 +498,7 @@
                     <LinearLayout
 
                         android:gravity="center"
-                        android:layout_weight="4"
+                        android:layout_weight="4.3"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
 
@@ -510,6 +519,7 @@
 
             <LinearLayout
 
+                android:id="@+id/layout_radio_btn_signup_form"
                 android:orientation="horizontal"
                 android:weightSum="5"
                 android:gravity="center"
@@ -584,6 +594,7 @@
 
                 <Button
 
+                    android:id="@+id/btn_signup_form_register"
                     android:layout_marginTop="@dimen/_5sdp"
                     android:layout_marginBottom="@dimen/_5sdp"
                     android:fontFamily="@font/roboto_regular"
@@ -615,9 +626,10 @@
                     android:text="Already have an account?"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
+
                 <TextView
 
-                    android:id="@+id/txtvw_signup_second_screen_login"
+                    android:id="@+id/txtvw_signup_form_login"
                     android:gravity="center"
                     android:textSize="@dimen/_12sdp"
                     android:textColor="@color/themecolor"

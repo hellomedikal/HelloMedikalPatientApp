@@ -182,7 +182,7 @@
                     android:layout_height="match_parent">
 
                     <TextView
-                        android:paddingLeft="@dimen/_10sdp"
+
                         android:id="@+id/textView_Country_code"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -196,6 +196,7 @@
 
                     <EditText
 
+                        android:inputType="phone"
                         android:paddingLeft="@dimen/_2sdp"
                         android:id="@+id/edtxt_phn_number"
                         android:background="@null"
@@ -290,7 +291,7 @@
 
                 android:gravity="center"
                 android:textAllCaps="false"
-                android:id="@+id/btn_signup_first_register"
+                android:id="@+id/btn_register_phn"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:background="@drawable/shape"

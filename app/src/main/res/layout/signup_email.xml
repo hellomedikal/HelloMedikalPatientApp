@@ -100,7 +100,7 @@
             <TextView
 
                 android:gravity="center"
-                android:textSize="@dimen/_12sdp"
+                android:textSize="@dimen/_11sdp"
                 android:textColor="#333e48"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Email Address"
@@ -109,7 +109,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="@dimen/_25sdp"
+                android:layout_height="wrap_content"
                 android:weightSum="4">
 
                 <EditText
@@ -117,11 +117,12 @@
                     android:clickable="true"
                     android:focusableInTouchMode="true"
                     android:inputType="textEmailAddress"
-                    android:id="@+id/edtxt_signup_first_screen_email"
+                    android:id="@+id/edtxt_signup_via_email_emailaddress"
                     android:layout_width="@dimen/_215sdp"
                     android:layout_height="@dimen/_23sdp"
                     android:layout_weight="3.8"
                     android:background="@null"
+                    android:textColor="@color/textcolor"
                     android:filterTouchesWhenObscured="false"
                     android:fontFamily="@font/roboto_regular"
                     android:includeFontPadding="false"
@@ -143,34 +144,29 @@
 
             </LinearLayout>
 
-            <LinearLayout
 
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="1dp">
-                <View
-
-
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="#353e47" />
-
-            </LinearLayout>
 
 
         </LinearLayout>
 
         <LinearLayout
 
+            android:orientation="vertical"
             android:layout_weight="1"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <View
+
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="#353e47" />
+
             <TextView
 
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:gravity="center"
-                android:textSize="@dimen/_13sdp"
+                android:textSize="@dimen/_11sdp"
                 android:textColor="#333e48"
                 android:fontFamily="@font/roboto_regular"
                 android:text="Confirmation code to be sent on your email."
@@ -201,7 +197,7 @@
 
                 android:gravity="center"
                 android:textAllCaps="false"
-                android:id="@+id/btn_signup_first_register"
+                android:id="@+id/btn_register_email"
                 android:layout_width="@dimen/_280sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:background="@drawable/shape"

@@ -99,7 +99,7 @@
                     android:fontFamily="@font/opensans_semibold"
                     android:text="SIGN IN"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_16sdp"
                     android:background="@drawable/shape_rounded_solid"
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="@dimen/_40sdp">
@@ -122,7 +122,7 @@
                     android:fontFamily="@font/opensans_semibold"
                     android:text="SIGNUP"
                     android:textColor="@color/themecolor"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_16sdp"
                     android:background="@drawable/shape_rounded"
                     android:layout_width="@dimen/_130sdp"
                     android:layout_height="@dimen/_40sdp">
@@ -163,7 +163,7 @@
 
                 android:id="@+id/explore_as_guest"
                 android:gravity="center"
-                android:textSize="@dimen/_18sdp"
+                android:textSize="@dimen/_15sdp"
                 android:textColor=" #3A3A3A"
                 android:fontFamily="@font/opensans_semibold"
                 android:text="Explore as Guest"

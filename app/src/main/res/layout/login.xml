@@ -3,6 +3,7 @@
 
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="11">
@@ -69,11 +70,13 @@
 
                 <TextView
 
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
                     android:gravity="center"
                     android:visibility="visible"
                     android:textColor="@color/textcolor"
                     android:fontFamily="@font/roboto_regular"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_15sdp"
                     android:textAllCaps="false"
                     android:text="Enter your login info to sign in to your account"
                     android:layout_width="wrap_content"
@@ -119,7 +122,7 @@
                         <LinearLayout
 
                             android:gravity="center"
-                            android:layout_weight="4.2"
+                            android:layout_weight="4.4"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
@@ -133,15 +136,15 @@
 
                         <LinearLayout
 
-                            android:layout_weight="0.8"
+                            android:layout_weight="0.6"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
 
                             <EditText
 
+                                android:id="@+id/edtxt_login_email"
                                 android:textColor="@color/textcolor"
-                                android:paddingLeft="@dimen/_5sdp"
                                 android:clickable="true"
                                 android:focusableInTouchMode="true"
                                 android:inputType="textEmailAddress"
@@ -154,7 +157,7 @@
                                 android:fontFamily="@font/roboto_regular"
                                 android:includeFontPadding="false"
                                 android:textColorHint="@color/grey"
-                                android:textSize="@dimen/_13sdp" />
+                                android:textSize="@dimen/_12sdp" />
 
                         </LinearLayout>
 
@@ -179,29 +182,29 @@
                         <LinearLayout
 
                             android:gravity="center"
-                            android:layout_weight="2"
+                            android:layout_weight="2.2"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
                             <ImageView
 
                                 android:background="@drawable/ic_login_password_icon"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content" />
+                                android:layout_width="@dimen/_12sdp"
+                                android:layout_height="@dimen/_13sdp" />
 
                         </LinearLayout>
 
                         <LinearLayout
 
-                            android:layout_weight="1.2"
+                            android:layout_weight="1.1"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
 
                             <EditText
 
+                                android:id="@+id/edtxt_login_password"
                                 android:textColor="@color/textcolor"
-                                android:paddingLeft="@dimen/_5sdp"
                                 android:clickable="true"
                                 android:focusableInTouchMode="true"
                                 android:inputType="textPassword"
@@ -214,34 +217,35 @@
                                 android:fontFamily="@font/roboto_regular"
                                 android:includeFontPadding="false"
                                 android:textColorHint="@color/grey"
-                                android:textSize="@dimen/_13sdp" />
+                                android:textSize="@dimen/_12sdp" />
 
                         </LinearLayout>
 
                         <LinearLayout
 
 
-                            android:layout_weight="1.8"
+                            android:layout_weight="1.7"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent">
 
-                            <view
+                            <ImageView
 
                                 android:layout_marginTop="@dimen/_8sdp"
                                 android:layout_marginBottom="@dimen/_8sdp"
-                                android:background="@color/themecolor"
+                                android:background="@color/textcolor"
                                 android:layout_width="@dimen/_1sdp"
                                 android:layout_height="match_parent">
 
-                            </view>
+                            </ImageView>
 
                             <TextView
 
+                                android:textStyle="bold"
                                 android:gravity="center"
                                 android:visibility="visible"
                                 android:textColor="@color/themecolor"
                                 android:fontFamily="@font/roboto_regular"
-                                android:textSize="@dimen/_16sdp"
+                                android:textSize="@dimen/_14sdp"
                                 android:textAllCaps="false"
                                 android:text="Forgot ?"
                                 android:layout_width="match_parent"
@@ -256,51 +260,18 @@
 
                 <LinearLayout
 
-                    android:gravity="center"
+                    android:paddingBottom="@dimen/_15sdp"
+                    android:gravity="bottom"
                     android:layout_weight="0.8"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
 
                     <LinearLayout
 
-                        android:orientation="horizontal"
+                        android:orientation="vertical"
                         android:weightSum="2"
                         android:layout_width="match_parent"
                         android:layout_height="@dimen/_40sdp">
-
-                        <LinearLayout
-
-                            android:gravity="center"
-                            android:orientation="horizontal"
-                            android:layout_weight="1"
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-
-                            <TextView
-
-                                android:gravity="center"
-                                android:visibility="visible"
-                                android:textColor="@color/textcolor"
-                                android:fontFamily="@font/roboto_regular"
-                                android:textSize="@dimen/_14sdp"
-                                android:textAllCaps="false"
-                                android:text="No account ?"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
-
-                            <TextView
-
-                                android:gravity="center"
-                                android:visibility="visible"
-                                android:textColor="@color/themecolor"
-                                android:fontFamily="@font/roboto_regular"
-                                android:textSize="@dimen/_14sdp"
-                                android:textAllCaps="false"
-                                android:text=" Signup"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent" />
-
-                        </LinearLayout>
 
                         <LinearLayout
 
@@ -313,19 +284,18 @@
 
                                 android:gravity="center"
                                 android:textAllCaps="false"
-                                android:id="@+id/btn_signup_first_register"
-                                android:layout_marginLeft="@dimen/_5sdp"
-                                android:layout_marginRight="@dimen/_5sdp"
+                                android:id="@+id/btn_login"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:background="@drawable/shape"
+                                android:background="@drawable/shape_rounded_solid"
                                 android:text="Login Now"
                                 android:textColor="#ffffff"
-                                android:textSize="@dimen/_13sdp"
+                                android:textSize="@dimen/_12sdp"
                                 android:fontFamily="@font/roboto_regular"
                                 />
 
                         </LinearLayout>
+
 
                     </LinearLayout>
 
@@ -338,6 +308,41 @@
                 android:layout_weight="2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+                <LinearLayout
+
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:textColor="@color/textcolor"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/_12sdp"
+                        android:textAllCaps="false"
+                        android:text="No account ?"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:textColor="@color/themecolor"
+                        android:fontFamily="@font/roboto_regular"
+                        android:textSize="@dimen/_13sdp"
+                        android:textAllCaps="false"
+                        android:text=" Signup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
 
             </LinearLayout>
 

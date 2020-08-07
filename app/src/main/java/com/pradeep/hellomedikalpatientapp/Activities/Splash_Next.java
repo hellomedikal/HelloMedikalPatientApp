@@ -36,9 +36,9 @@ public class Splash_Next extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-               /* Intent intent=new Intent(Splash_Next.this, Login_Register.class);
-                Paper.book().write("btn_login_signup","1");
-                startActivity(intent);*/
+                Intent intent=new Intent(Splash_Next.this, Login.class);
+               // Paper.book().write("btn_login_signup","1");
+                startActivity(intent);
 
             }
         });
@@ -47,9 +47,9 @@ public class Splash_Next extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                /*Intent intent=new Intent(Splash_Next.this, Login_Register.class);
-                Paper.book().write("btn_login_signup","2");
-                startActivity(intent);*/
+                Intent intent=new Intent(Splash_Next.this, Signup_Email_Phone.class);
+                //Paper.book().write("btn_login_signup","2");
+                startActivity(intent);
 
             }
         });

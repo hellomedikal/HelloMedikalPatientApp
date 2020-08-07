@@ -5,12 +5,18 @@
 
     <dist:module dist:instant="true" />
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+
     <application
+
+        android:name="com.pradeep.hellomedikalpatientapp.App"
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:fullBackupOnly="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_fevicon_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_fevicon_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.NoActionBar">
 
@@ -30,6 +36,25 @@
             android:name=".Activities.Splash_Next"
             android:screenOrientation="portrait" />
 
+        <activity
+            android:name=".Activities.Login"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Signup_Email_Phone"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Sample_Home_Screen"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Otp_Screen"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".Activities.Register_Form"
+            android:screenOrientation="portrait" />
 
 
     </application>
