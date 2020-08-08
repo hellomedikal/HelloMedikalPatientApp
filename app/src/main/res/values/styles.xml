@@ -14,4 +14,19 @@
         <item name="android:colorAccent" tools:targetApi="lollipop">@color/themecolor</item>
     </style>
 
+
+    <style name="MyCheckBoxStyle" parent="AppTheme">
+
+        <item name="colorAccent">@color/themecolor</item>
+        <item name="android:textColorPrimaryDisableOnly">@color/themecolor</item>
+        <item name="buttonTint">@color/themecolor</item>
+    </style>
+
+    <style name="TimePickerTheme" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/themecolor</item>
+    </style>
+
+
 </resources>

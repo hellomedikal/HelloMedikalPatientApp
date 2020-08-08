@@ -52,6 +52,7 @@ public class Signup_Email  extends Fragment {
 
                 if (!TextUtils.isEmpty(email.getText().toString())){
 
+                    Paper.book().write("email_address",email.getText().toString());
                     email_verification();
 
                 }
@@ -104,6 +105,7 @@ public class Signup_Email  extends Fragment {
 
                     Paper.book().write("otp",response.body().getOtp().toString());
                     Paper.book().write("email",email.getText().toString());
+                    Paper.book().write("phn","");
 
                     startActivity(intent);
 

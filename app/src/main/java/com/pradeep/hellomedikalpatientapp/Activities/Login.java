@@ -5,8 +5,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -29,6 +32,7 @@ public class Login extends AppCompatActivity {
 
     EditText edtxt_login_email, edtxt_login_password;
     Button btn_login;
+    TextView txtvw_login_signup;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,6 +42,29 @@ public class Login extends AppCompatActivity {
         btn_login = findViewById(R.id.btn_login);
         edtxt_login_email =findViewById(R.id.edtxt_login_email);
         edtxt_login_password = findViewById(R.id.edtxt_login_password);
+        txtvw_login_signup = findViewById(R.id.txtvw_login_signup);
+
+        /*********************************************** SETTING STATUS BAR WHITE ******************************************************************/
+
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        }
+
+        /********************************************************************************************************************************************/
+
+        txtvw_login_signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Login.this,Signup_Email_Phone.class);
+                startActivity(intent);
+
+            }
+        });
+
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override

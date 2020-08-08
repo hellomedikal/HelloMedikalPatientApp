@@ -3,6 +3,8 @@ package com.pradeep.hellomedikalpatientapp.Activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -39,6 +41,19 @@ public class Signup_Email_Phone extends AppCompatActivity {
         txtvw_signup_type_phn = findViewById(R.id.txtvw_signup_type_phn);
 
 
+        /*********************************************** SETTING STATUS BAR WHITE ******************************************************************/
+
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        }
+
+        /********************************************************************************************************************************************/
+
+
+
 
         fragmentTransaction=getSupportFragmentManager().beginTransaction().addToBackStack("category").replace(R.id.containerr,new Signup_Email());
         fragmentTransaction.commit();
@@ -73,7 +88,7 @@ public class Signup_Email_Phone extends AppCompatActivity {
                 layout_signup_type_phn_outer.setBackgroundResource(R.drawable.shape_right_rouded_signup_grey);
                 layout_signup_type_phn_inner.setBackgroundResource(R.drawable.shape);
                 imgvw_signup_type_email.setBackground(getResources().getDrawable(R.drawable.ic_email_blue));
-                imgvw_signup_type_phn.setBackground(getResources().getDrawable(R.drawable.ic_phone_icon_grey));
+                imgvw_signup_type_phn.setBackground(getResources().getDrawable(R.drawable.ic_phone_white));
                 txtvw_signup_type_email.setTextColor(getResources().getColor(R.color.themecolor));
                 txtvw_signup_type_phn.setTextColor(getResources().getColor(R.color.white));
 

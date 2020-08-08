@@ -6,7 +6,8 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="11">
+    android:weightSum="11"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
 
@@ -88,6 +89,7 @@
 
                     <ImageView
 
+                        android:id="@+id/img_male"
                         android:layout_marginLeft="@dimen/_30sdp"
                         android:gravity="center"
                         android:layout_width="wrap_content"
@@ -97,6 +99,7 @@
 
                 <TextView
 
+                    android:id="@+id/txtvw_male"
                     android:layout_marginTop="@dimen/_10sdp"
                     android:layout_marginLeft="@dimen/_30sdp"
                     android:gravity="center"
@@ -122,6 +125,7 @@
 
                     <ImageView
 
+                        android:id="@+id/img_female"
                         android:layout_marginLeft="@dimen/_30sdp"
                         android:gravity="left"
                         android:layout_width="wrap_content"
@@ -131,11 +135,12 @@
 
                 <TextView
 
+                    android:id="@+id/txtvw_female"
                     android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginLeft="@dimen/_35sdp"
+                    android:layout_marginLeft="@dimen/_45sdp"
                     android:gravity="center"
                     android:textSize="@dimen/_12sdp"
-                    android:textColor="@color/themecolor"
+                    android:textColor="@color/textcolor"
                     android:fontFamily="@font/roboto_regular"
                     android:text="Female"
                     android:layout_width="wrap_content"
@@ -342,12 +347,13 @@
                             android:paddingLeft="@dimen/_12sdp"
                             android:clickable="true"
                             android:focusableInTouchMode="true"
-                            android:inputType="textEmailAddress"
+                            android:inputType="phone"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="3.8"
+                            android:maxLength="10"
                             android:background="@null"
-                            android:hint="Enter Your Phone Number"
+                            android:hint="Enter Phone Number "
                             android:filterTouchesWhenObscured="false"
                             android:fontFamily="@font/roboto_regular"
                             android:includeFontPadding="false"
@@ -379,6 +385,151 @@
 
             </LinearLayout>
 
+           <!-- <LinearLayout
+
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/shape_grey_rounded"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+                <LinearLayout
+
+
+                    android:orientation="horizontal"
+                    android:weightSum="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_35sdp">
+
+                    <LinearLayout
+
+                        android:gravity="center"
+                        android:layout_weight="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <RelativeLayout
+                            android:id="@+id/rlClickConsumer"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ccp_selectable_bg"
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/linear_flag_holder"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="@dimen/_5sdp"
+                                android:layout_marginRight="@dimen/_5sdp">
+
+                                <LinearLayout
+                                    android:id="@+id/linear_flag_border"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@android:color/transparent">
+
+                                    <ImageView
+                                        android:id="@+id/image_flag"
+                                        android:layout_width="@dimen/_15sdp"
+                                        android:layout_height="@dimen/_16sdp"
+                                        android:adjustViewBounds="true"
+                                        android:src="@drawable/flag_india" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            &lt;!&ndash;</LinearLayout>&ndash;&gt;
+                            <TextView
+                                android:id="@+id/textView_selectedCountry"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/linear_flag_holder"
+                                android:layout_toRightOf="@+id/linear_flag_holder"
+                                android:singleLine="true"
+                                android:text="(IN)"
+                                android:textColor="@android:color/black"
+                                android:textSize="@dimen/_9sdp" />
+
+                            <ImageView
+
+                                android:paddingLeft="@dimen/_2sdp"
+                                android:id="@+id/imageView_arrow"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toEndOf="@+id/textView_selectedCountry"
+                                android:layout_toRightOf="@+id/textView_selectedCountry"
+                                android:adjustViewBounds="true"
+                                android:src="@drawable/ic_arrow_drop_down_black" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:orientation="horizontal"
+                        android:layout_weight="2.3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+
+                            android:id="@+id/textView_Country_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toEndOf="@+id/linear_flag_holder"
+                            android:layout_toRightOf="@+id/linear_flag_holder"
+                            android:singleLine="true"
+                            android:text="+91"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <EditText
+
+                            android:inputType="phone"
+                            android:paddingLeft="@dimen/_2sdp"
+                            android:id="@+id/edtxt_phn_number"
+                            android:background="@null"
+                            android:textColor="@color/textcolor"
+                            android:maxLength="10"
+                            android:textSize="@dimen/_13sdp"
+                            android:textColorHint="@color/grey"
+                            android:hint="Enter Mobile Number"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+
+                        android:layout_weight="4.7"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:layout_weight="0.2"
+                            android:background="@drawable/ic_phone_grey" />
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+-->
             <LinearLayout
 
                 android:layout_weight="1"
@@ -449,7 +600,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
-                            android:background="@drawable/ic_email_icon_grey" />
+                            android:background="@drawable/ic_login_password_icon" />
 
                     </LinearLayout>
 
@@ -482,7 +633,7 @@
 
                         <TextView
 
-                            android:id="@+id/edtxt_signup_form_dob"
+                            android:id="@+id/txtvw_signup_form_dob"
                             android:text="Date of Birth"
                             android:paddingLeft="@dimen/_12sdp"
                             android:gravity="center_vertical"
@@ -519,6 +670,24 @@
 
             <LinearLayout
 
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <CheckBox
+
+                    android:theme="@style/MyCheckBoxStyle"
+                    android:id="@+id/checkBox1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="I agree with your terms and conditions"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </LinearLayout>
+
+<!--            <LinearLayout
+
                 android:id="@+id/layout_radio_btn_signup_form"
                 android:orientation="horizontal"
                 android:weightSum="5"
@@ -526,6 +695,8 @@
                 android:layout_weight="1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+
+
 
                 <LinearLayout
 
@@ -584,7 +755,7 @@
 
 
 
-            </LinearLayout>
+            </LinearLayout>-->
 
             <LinearLayout
 

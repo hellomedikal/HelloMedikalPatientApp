@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -29,6 +31,19 @@ public class Splash_Next extends AppCompatActivity {
         btn_login=findViewById(R.id.btn_login);
         btn_register=findViewById(R.id.btn_register);
         explore_as_guest= findViewById(R.id.explore_as_guest);
+
+
+        /*********************************************** SETTING STATUS BAR WHITE ******************************************************************/
+
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        }
+
+        /********************************************************************************************************************************************/
+
 
         splash_next_link_open_driver.setPaintFlags(splash_next_link_open_driver.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);  // SET UNDERLINE BELOW FORGOT PASSWORD
 
@@ -74,8 +89,10 @@ public class Splash_Next extends AppCompatActivity {
                 .setCancelable(false)
                 .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
-                        Splash_Next.super.onBackPressed();
-                        finish();
+                       // Splash_Next.super.onBackPressed();
+                        finishAffinity();
+                        System.exit(0);
+                        //finish();
 
                     }
                 })

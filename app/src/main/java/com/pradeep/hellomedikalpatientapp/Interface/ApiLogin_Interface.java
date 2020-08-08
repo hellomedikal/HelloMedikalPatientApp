@@ -4,6 +4,7 @@ package com.pradeep.hellomedikalpatientapp.Interface;
 import com.pradeep.hellomedikalpatientapp.POJO.ModelEmailVerify;
 import com.pradeep.hellomedikalpatientapp.POJO.ModelLogin;
 import com.pradeep.hellomedikalpatientapp.POJO.ModelPhoneVerify;
+import com.pradeep.hellomedikalpatientapp.POJO.ModelRegister;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -25,7 +26,12 @@ public interface ApiLogin_Interface {
 
     @FormUrlEncoded
     @POST("Verification")
-    Call<ModelPhoneVerify> PHONE_VERIFY(@Header("X-API-KEY") String api_key, @Header("Authorization") String authorization, @Header("Content-Type") String header, @Field("phone_number") String phone_number);
+    Call<ModelPhoneVerify> PHONE_VERIFY(@Header("X-API-KEY") String api_key, @Header("Authorization") String authorization, @Header("Content-Type") String header, @Field("phone_number") String phone_number, @Field("country_code") String country_code);
+
+    @FormUrlEncoded
+    @POST("api/patient/RegisterPatient")
+    Call<ModelRegister> REGISTER_CALL(@Header("X-API-KEY") String api_key, @Header("Authorization") String authorization, @Header("Content-Type") String header, @Field("email") String email, @Field("password") String password , @Field("phone_number") String phone_number,
+                                      @Field("name") String name, @Field("dob") String dob , @Field("gender") String gender);
 
 
 }

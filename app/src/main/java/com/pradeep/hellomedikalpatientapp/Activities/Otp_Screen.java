@@ -1,5 +1,6 @@
 package com.pradeep.hellomedikalpatientapp.Activities;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -8,6 +9,8 @@ import android.text.TextWatcher;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -21,15 +24,26 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.pradeep.hellomedikalpatientapp.Fragment.Signup.Signup_Email;
 import com.pradeep.hellomedikalpatientapp.Fragment.Signup.Signup_Phone;
+import com.pradeep.hellomedikalpatientapp.Interface.ApiLogin_Interface;
+import com.pradeep.hellomedikalpatientapp.POJO.ModelEmailVerify;
+import com.pradeep.hellomedikalpatientapp.POJO.ModelPhoneVerify;
 import com.pradeep.hellomedikalpatientapp.R;
 
+import java.util.concurrent.TimeUnit;
+
 import io.paperdb.Paper;
+import okhttp3.OkHttpClient;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
 
 
 public class Otp_Screen extends AppCompatActivity {
 
     TextView txt_resend_code,textvw_phn_number;
-    LinearLayout layout_otp_submit,layout_resend_screen;
+    LinearLayout layout_otp_submit,layout_resend_screen,layout_back;
     Button btn_resend_call_me,btn_resend_text_me;
     ImageView img_otp_submit;
     Signup_Email signup_email;
@@ -54,15 +68,37 @@ public class Otp_Screen extends AppCompatActivity {
         otp_third_digit=findViewById(R.id.otp_third_digit);
         otp_fourth_digit=findViewById(R.id.otp_fourth_digit);
         textvw_phn_number=findViewById(R.id.textvw_phn_number);
+        layout_back = findViewById(R.id.layout_back);
 
         signup_email = new Signup_Email();
         signup_phone = new Signup_Phone();
 
-       data = Paper.book().read("otp");
+
+        /*********************************************** SETTING STATUS BAR WHITE ******************************************************************/
+
+        if (android.os.Build.VERSION.SDK_INT >= 21) {
+            Window window = this.getWindow();
+            window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
+            window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
+            window.setStatusBarColor(this.getResources().getColor(R.color.white));
+        }
+
+        /********************************************************************************************************************************************/
+
+
+        data = Paper.book().read("otp");
        email = Paper.book().read("email");
        phn  = Paper.book().read("phn");
 
-        textvw_phn_number.setText(email);
+       if (email != null){
+
+           textvw_phn_number.setText(email);
+       }
+
+        if (phn != null){
+
+            textvw_phn_number.setText(phn);
+        }
 
         //btn_login_signup= Paper.book().read("btn_login_signup");
 
@@ -176,14 +212,29 @@ public class Otp_Screen extends AppCompatActivity {
 
                if (verify_type.equals("email")){
 
+                   String email=Paper.book().read("email_address");
                  //  signup_email.email_verification();
-
+                   email_verification(email);
                }
                else {
 
+                   String countrycode = Paper.book().read("country_code");
+                   String userphn = Paper.book().read("user_phone");
+
+                   Phone_verify(countrycode,userphn);
                   // signup_phone.Phone_verify("1",phn);
 
                }
+
+            }
+        });
+
+        layout_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Otp_Screen.this,Signup_Email_Phone.class);
+                startActivity(intent);
 
             }
         });
@@ -192,14 +243,11 @@ public class Otp_Screen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-
                 layout_resend_screen.setVisibility(View.GONE);
                 layout_otp_submit.setVisibility(View.VISIBLE);
 
             }
         });
-
-
 
         img_otp_submit.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -271,6 +319,123 @@ public class Otp_Screen extends AppCompatActivity {
             }
         });
 
+    }
+
+    public void Phone_verify(String country_code, String phn) {
+
+
+        final String final_phn = country_code+phn;
+
+        Paper.book().write("country_code",country_code);
+        Paper.book().write("user_phone",phn);
+
+        final ProgressDialog progressDialogs = new ProgressDialog(Otp_Screen.this,R.style.AlertDialogCustom);
+        progressDialogs.setCancelable(false);
+        progressDialogs.setMessage("Please Wait.......");
+        progressDialogs.show();
+
+
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .readTimeout(60, TimeUnit.SECONDS)
+                .connectTimeout(60, TimeUnit.SECONDS)
+                .build();
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ApiLogin_Interface.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
+                .build();
+
+        //Defining retrofit api service
+        ApiLogin_Interface service = retrofit.create(ApiLogin_Interface.class);
+
+        service.PHONE_VERIFY("adeladmin","Basic YWRtaW46MTIzNA==","application/x-www-form-urlencoded",phn,country_code).enqueue(new Callback<ModelPhoneVerify>() {
+            @Override
+            public void onResponse(Call<ModelPhoneVerify> call, Response<ModelPhoneVerify> response) {
+                if (response.body().getStatusCode().equals(200)){
+
+                    Toast.makeText(getApplicationContext(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
+
+                }
+
+                else {
+
+                    Toast.makeText(getApplicationContext(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
+
+                }
+
+                progressDialogs.dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<ModelPhoneVerify> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                t.printStackTrace();
+                progressDialogs.dismiss();
+
+            }
+        });
+    }
+    public void email_verification(final String email) {
+
+
+        final ProgressDialog progressDialogs = new ProgressDialog(Otp_Screen.this,R.style.AlertDialogCustom);
+        progressDialogs.setCancelable(false);
+        progressDialogs.setMessage("Please Wait.......");
+        progressDialogs.show();
+
+
+        final OkHttpClient okHttpClient = new OkHttpClient.Builder()
+                .readTimeout(60, TimeUnit.SECONDS)
+                .connectTimeout(60, TimeUnit.SECONDS)
+                .build();
+
+
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl(ApiLogin_Interface.BASE_URL)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(okHttpClient)
+                .build();
+
+        //Defining retrofit api service
+        ApiLogin_Interface service = retrofit.create(ApiLogin_Interface.class);
+
+        service.EMAIL_VERIFY_CALL("adeladmin","Basic YWRtaW46MTIzNA==","application/x-www-form-urlencoded",email).enqueue(new Callback<ModelEmailVerify>() {
+            @Override
+            public void onResponse(Call<ModelEmailVerify> call, Response<ModelEmailVerify> response) {
+                if (response.body().getStatusCode().equals(200)){
+
+                    Toast.makeText(getApplicationContext(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
+/*
+                    Intent intent = new Intent(getApplicationContext(), Otp_Screen.class);
+
+                    Paper.book().write("otp",response.body().getOtp().toString());
+                    Paper.book().write("email",email);
+
+                    startActivity(intent);*/
+
+                }
+
+                else {
+
+                    Toast.makeText(getApplicationContext(),response.body().getMessage(),Toast.LENGTH_SHORT).show();
+
+                }
+
+                progressDialogs.dismiss();
+            }
+
+            @Override
+            public void onFailure(Call<ModelEmailVerify> call, Throwable t) {
+
+                Toast.makeText(getApplicationContext(), t.getMessage(), Toast.LENGTH_SHORT).show();
+                t.printStackTrace();
+                progressDialogs.dismiss();
+
+            }
+        });
     }
 
 /*

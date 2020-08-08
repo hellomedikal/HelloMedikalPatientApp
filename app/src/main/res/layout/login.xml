@@ -331,6 +331,7 @@
 
                     <TextView
 
+                        android:id="@+id/txtvw_login_signup"
                         android:gravity="center"
                         android:visibility="visible"
                         android:textColor="@color/themecolor"

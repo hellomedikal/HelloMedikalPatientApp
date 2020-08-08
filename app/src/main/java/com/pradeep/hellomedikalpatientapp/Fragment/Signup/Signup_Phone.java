@@ -281,10 +281,10 @@ public class Signup_Phone  extends Fragment {
     public void Phone_verify(String country_code, String phn) {
 
 
+        final String final_phn = country_code+phn;
 
-       // final String Phn_number= country_code + phn;
-
-        final String Phn_number = phn;
+        Paper.book().write("country_code",country_code);
+        Paper.book().write("user_phone",phn);
 
         final ProgressDialog progressDialogs = new ProgressDialog(getActivity(),R.style.AlertDialogCustom);
         progressDialogs.setCancelable(false);
@@ -307,7 +307,7 @@ public class Signup_Phone  extends Fragment {
         //Defining retrofit api service
         ApiLogin_Interface service = retrofit.create(ApiLogin_Interface.class);
 
-        service.PHONE_VERIFY("adeladmin","Basic YWRtaW46MTIzNA==","application/x-www-form-urlencoded",Phn_number).enqueue(new Callback<ModelPhoneVerify>() {
+        service.PHONE_VERIFY("adeladmin","Basic YWRtaW46MTIzNA==","application/x-www-form-urlencoded",phn,country_code).enqueue(new Callback<ModelPhoneVerify>() {
             @Override
             public void onResponse(Call<ModelPhoneVerify> call, Response<ModelPhoneVerify> response) {
                 if (response.body().getStatusCode().equals(200)){
@@ -317,7 +317,8 @@ public class Signup_Phone  extends Fragment {
                     Intent intent = new Intent(getActivity(), Otp_Screen.class);
 
                     Paper.book().write("otp",response.body().getOTP().toString());
-                    Paper.book().write("phn",Phn_number);
+                    Paper.book().write("phn",final_phn);
+                    Paper.book().write("email","");
 
                     startActivity(intent);
 
